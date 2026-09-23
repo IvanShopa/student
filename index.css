@@ -1,0 +1,136 @@
+:root {
+  color-scheme: light dark;
+  --ivsh-color-1: white;
+  --ivsh-color-2: black;
+  --ivsh-color-1-2: light-dark(var(--ivsh-color-1), var(--ivsh-color-2));
+  --ivsh-color-2-1: light-dark(var(--ivsh-color-2), var(--ivsh-color-1));
+  --ivsh-color-3: hsl(0, 65%, 88%);
+  --ivsh-color-4: hsl(0, 65%, 12%);
+  --ivsh-color-3-4: light-dark(var(--ivsh-color-3), var(--ivsh-color-4));
+  --ivsh-color-5: hsl(31, 89%, 90%);
+  --ivsh-color-6: hsl(31, 89%, 10%);
+  --ivsh-color-5-6: light-dark(var(--ivsh-color-5), var(--ivsh-color-6));
+  --ivsh-color-7: hsl(218, 77%, 88%);
+  --ivsh-color-8: hsl(218, 77%, 12%);
+  --ivsh-color-8-7: light-dark(var(--ivsh-color-8), var(--ivsh-color-7));
+  --ivsh-color-9: hsl(104, 35%, 87%);
+  --ivsh-color-10: hsl(104, 35%, 13%);
+  --ivsh-color-9-10: light-dark(var(--ivsh-color-9), var(--ivsh-color-10));
+  --ivsh-color-11: hsl(102, 37%, 75%);
+  --ivsh-color-12: hsl(102, 37%, 25%);
+  --ivsh-color-11-12: light-dark(var(--ivsh-color-11), var(--ivsh-color-12));
+  --ivsh-color-13: hsl(258, 34%, 87%);
+  --ivsh-color-14: hsl(258, 34%, 13%);
+  --ivsh-color-13-14: light-dark(var(--ivsh-color-13), var(--ivsh-color-14));
+  --ivsh-color-15: hsl(257, 36%, 75%);
+  --ivsh-color-16: hsl(257, 36%, 25%);
+  --ivsh-color-15-16: light-dark(var(--ivsh-color-15), var(--ivsh-color-16));
+  --ivsh-color-17: hsl(255, 37%, 63%);
+  --ivsh-color-18: hsl(255, 37%, 37%);
+  --ivsh-color-17-18: light-dark(var(--ivsh-color-17), var(--ivsh-color-18));
+  --ivsh-size-1: 1px;
+  --ivsh-size-2: 2px;
+  --ivsh-size-3: 8px;
+  --ivsh-size-4: 16px
+}
+
+html {
+  scrollbar-color: var(--ivsh-color-1-2) var(--ivsh-color-2-1)
+}
+
+body {
+  background: var(--ivsh-color-5-6);
+  color: var(--ivsh-color-2-1);
+  font: bold var(--ivsh-size-4) monospace;
+  margin: 0
+}
+body::selection {
+  background: var(--ivsh-color-2-1);
+  color: var(--ivsh-color-1-2)
+}
+
+ivsh-app {
+  display: block
+}
+
+ivsh-navigate {
+  background: var(--ivsh-color-3-4);
+  display: block;
+  overflow: auto;
+  padding: var(--ivsh-size-3);
+  position: sticky;
+  scrollbar-color: var(--ivsh-color-2-1) var(--ivsh-color-3-4);
+  text-align: center;
+  top: 0;
+  white-space: nowrap
+}
+
+ivsh-main {
+  display: grid;
+  gap: var(--ivsh-size-3);
+  padding: var(--ivsh-size-3)
+}
+
+ivsh-text {
+  display: block;
+  text-align: center
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent
+}
+.ivsh-link {
+  color: var(--ivsh-color-8-7)
+}
+.ivsh-link:hover {
+  text-decoration: underline
+}
+.ivsh-button {
+  background: var(--ivsh-color-9-10);
+  border: var(--ivsh-color-11-12) solid var(--ivsh-size-2);
+  color: var(--ivsh-color-2-1);
+  display: block;
+  padding: var(--ivsh-size-3);
+  text-align: center;
+  user-select: none
+}
+.ivsh-button:hover {
+  background: var(--ivsh-color-11-12)
+}
+
+ivsh-box-table {
+  display: block;
+  border-bottom: var(--ivsh-size-1) solid var(--ivsh-color-15-16);
+  border-left: var(--ivsh-size-2) solid var(--ivsh-color-15-16);
+  border-right: var(--ivsh-size-2) solid var(--ivsh-color-15-16);
+  overflow: auto;
+  scrollbar-color: var(--ivsh-color-2-1) var(--ivsh-color-15-16)
+}
+table {
+  background: var(--ivsh-color-13-14);
+  border-collapse: collapse;
+  width: 100%
+}
+thead {
+  background: var(--ivsh-color-17-18)
+}
+tr:hover {
+  background: var(--ivsh-color-17-18)
+}
+th, td {
+  border: var(--ivsh-size-2) solid var(--ivsh-color-15-16);
+  padding: var(--ivsh-size-3);
+  white-space: nowrap
+}
+th:first-child,
+td:first-child {
+  border-left-width: 0
+}
+td:last-child,
+th:last-child {
+  border-right-width: 0p
+}
+tbody tr:last-child td {
+  border-bottom: var(--ivsh-size-1) solid var(--ivsh-color-15-16)
+}
